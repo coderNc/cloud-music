@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "jsx": "react",
+    "sourceMap": true,
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"],
+      "componeents": ["src/components"]
+    },
+    "experimentalDecorators": true
+  },
+  "exclude": ["node_modules", "build"]
+}
