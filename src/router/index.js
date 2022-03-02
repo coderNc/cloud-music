@@ -1,22 +1,40 @@
-import React from 'react';
-// import { Redirect } from "react-router-dom";
-import Discover from '@/pages/discover';
-const Friend = React.lazy(_ => import("../pages/friend"));
-const Mine = React.lazy(_ => import("../pages/mine"));
+import React from "react";
+import { Redirect } from "react-router-dom";
+import Discover from "@/pages/discover";
+const Friend = React.lazy((_) => import("../pages/friend"));
+const Mine = React.lazy((_) => import("../pages/mine"));
+const Recommend = React.lazy(() =>
+  import("@/pages/discover/c-pages/recommend/index")
+);
 
 const routes = [
   {
-    path: '/',
+    path: "/",
     exact: true,
-    component: Discover
+    render: () => <Redirect to="/discover" />,
+  },
+  {
+    path: "/discover",
+    component: Discover,
+    routes: [
+      {
+        path: "/discover",
+        exact: true,
+        render: () => <Redirect to="/discover/recommend" />,
+      },
+      {
+        path: "/discover/recommend",
+        component: Recommend,
+      },
+    ],
   },
   {
     path: "/mine",
-    component: Mine
+    component: Mine,
   },
   {
     path: "/friend",
-    component: Friend
+    component: Friend,
   },
 ];
 

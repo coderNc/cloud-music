@@ -9,7 +9,7 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "antd": "^4.5.1",
-    "axios": "^0.19.2",
+    "axios": "^0.24.0",
     "immutable": "^4.0.0-rc.12",
     "normalize.css": "^8.0.1",
     "react": "^16.13.1",
@@ -46,5 +46,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "install": "^0.13.0",
+    "prettier": "^2.5.1"
   }
 }
