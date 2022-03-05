@@ -1,35 +1,27 @@
-import React, { memo, useEffect } from 'react'
-
+import React, { memo } from 'react'
 import { RecommendWrapper } from './style'
-import { getTopBannersAction } from './store/actionCreators'
-import { connect } from 'react-redux'
+import TopBanner from './c-cpns/top-banner';
 
-function HYRecommend({ getBanners, topBanners }) {
-  useEffect(() => {
-    getBanners()
-  }, [getBanners])
+function Recommend(props) {
+
 
   return (
     <RecommendWrapper>
-      {topBanners?.map((item, index) => (
-        <div key={index}>
-          <h2>{index}</h2>
-        </div>
-      ))}
+      <TopBanner />
     </RecommendWrapper>
   )
 }
-const mapStateToProps = (state) => ({
-  topBanners: state?.recommend?.topBanners
-})
+// const mapStateToProps = (state) => ({
+//   topBanners: state?.recommend?.topBanners
+// })
 
-const mapDispatchToProps = (dispatch) => ({
-  getBanners: () => {
-    dispatch(getTopBannersAction())
-  }
-})
+// const mapDispatchToProps = (dispatch) => ({
+//   getBanners: () => {
+//     dispatch(getTopBannersAction())
+//   }
+// })
 
-export default connect(mapStateToProps, mapDispatchToProps)(memo(HYRecommend))
+export default memo(Recommend)
 
 // function HYRecommend(props) {
 //   const { getBanners, topBanners } = props;

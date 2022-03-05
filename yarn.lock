@@ -5729,7 +5729,7 @@ immer@1.10.0:
   resolved "https://pkgs.d.xiaomi.net:443/artifactory/api/npm/mi-npm/immer/-/immer-1.10.0.tgz#bad67605ba9c810275d91e1c2a47d4582e98286d"
   integrity sha1-utZ2BbqcgQJ12R4cKkfUWC6YKG0=
 
-immutable@^4.0.0-rc.12:
+immutable@^4.0.0:
   version "4.0.0"
   resolved "https://pkgs.d.xiaomi.net:443/artifactory/api/npm/mi-npm/immutable/-/immutable-4.0.0.tgz#b86f78de6adef3608395efb269a91462797e2c23"
   integrity sha1-uG943mre82CDle+yaakUYnl+LCM=
